@@ -1,0 +1,56 @@
+@primary-color: #2DA44E;
+html, body, #app{height: 100%;}
+*{
+    margin: 0;
+    padding: 0;
+    color: #333; 
+    font-size: 14px;
+    font-family: '微软雅黑';
+    box-sizing: border-box;
+    line-height: 32px;
+} 
+.app-page{height: 100%;}
+.app-page-body{padding: 10px;}
+.app-cp{cursor: pointer;}
+.app-link{
+
+}
+/* 标题样式 */
+.app-title{
+    font-weight: bold;
+}
+.app-title-small{}
+.app-title-middle{}
+.app-title-big{
+    font-size: 32px;  
+}
+
+/* 按钮样式 */
+.app-btn{
+    display: inline-block;    
+    border-radius: 4px;
+    padding: 0 15px;
+    border: solid 1px #ccc;
+}
+.app-btn-login, .app-btn-registry{
+    background-color: @primary-color;
+    color: #FFF; 
+}
+
+
+/**
+ *  element样式复写 
+ */
+/* 输入框样式 */
+.el-input{
+    &.app-input-small{
+
+    }
+    &.app-input-middle{
+
+    }
+    &.app-input-big .el-input__inner{
+        height: 40px;
+        line-height: 40px;
+    }
+} 

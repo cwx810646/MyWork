@@ -1,15 +1,16 @@
 <template>
-  <div class="home">
-    {{data}}
+  <div class="home"> 
+      <Header />
   </div>
 </template>
 
 <script>
 import Interface from "@/commonJs/http/interface.js";
+import Header from './components/header.vue';
 
 export default {
   name: "home",
-  components: {},
+  components: {Header},
   data(){
     return {
       data: "",

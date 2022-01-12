@@ -1,10 +1,20 @@
 import { createRouter, createWebHistory } from "vue-router";
-import home from "../views/home.vue";
+import home from "../views/home";
+import login from "../views/login";
+import registry from "../views/registry";
 
 const routes = [
   {
     path: "/",
-    redirect: "/home"
+    redirect: "/login"
+  },
+  {
+    path: "/login",
+    component: login,
+  },
+  {
+    path: "/registry",
+    component: registry,
   },
   {
     path: "/home",
