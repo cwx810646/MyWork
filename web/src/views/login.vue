@@ -2,30 +2,28 @@
     <div class="app-page login">
         <div class="login-body">
             <div class="login-main">
-                <div class="login-title app-title app-title-big">用户登录</div>
-                <div>
-                    <el-form
-                        ref="loginForm"
-                        :model="loginForm" 
-                    >
-                        <el-form-item>
-                            <el-input
-                            ref="account"
-                            class="app-input-big"
-                            v-model="loginForm.account"
-                            placeholder="请输入用户名"
-                            />
-                        </el-form-item>
-                        <el-form-item>
-                            <el-input 
-                            class="app-input-big"
-                            type="password"
-                            v-model="loginForm.password"
-                            placeholder="请输入密码"
-                            />
-                        </el-form-item> 
-                    </el-form>
-                </div> 
+                <div class="login-title app-title app-title-middle">用户登录</div> 
+                <el-form
+                    ref="loginForm"
+                    :model="loginForm" 
+                >
+                    <el-form-item>
+                        <el-input
+                        ref="account"
+                        class="app-input-big"
+                        v-model="loginForm.account"
+                        placeholder="请输入用户名"
+                        />
+                    </el-form-item>
+                    <el-form-item>
+                        <el-input 
+                        class="app-input-big"
+                        type="password"
+                        v-model="loginForm.password"
+                        placeholder="请输入密码"
+                        />
+                    </el-form-item> 
+                </el-form> 
                 <div>
                     <el-checkbox v-model="checked1" label="记住密码" size="large"></el-checkbox>
                     <div class="operate-btns">
@@ -35,14 +33,14 @@
                 </div> 
             </div>
         </div> 
-        <Footer />
+        <Copyright />
     </div>
 </template>
 <script>
-import Footer from './components/footer.vue';
+import Copyright from './components/copyright.vue';
 
 export default {
-    components:{Footer},
+    components:{Copyright},
     data(){
         return {
             loginForm: {},

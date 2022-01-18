@@ -1,13 +1,15 @@
-@primary-color: #2DA44E;
+@import "./variables.less";
 html, body, #app{height: 100%;}
 *{
     margin: 0;
-    padding: 0;
-    color: #333; 
+    padding: 0; 
     font-size: 14px;
     font-family: '微软雅黑';
-    box-sizing: border-box;
-    line-height: 32px;
+    box-sizing: border-box; 
+    text-align: left;
+} 
+li{
+    list-style: none;
 } 
 .app-page{height: 100%;}
 .app-page-body{padding: 10px;}
@@ -19,8 +21,12 @@ html, body, #app{height: 100%;}
 .app-title{
     font-weight: bold;
 }
-.app-title-small{}
-.app-title-middle{}
+.app-title-small{
+    font-size: 16px; 
+}
+.app-title-middle{
+    font-size: 24px;  
+}
 .app-title-big{
     font-size: 32px;  
 }
@@ -54,3 +60,14 @@ html, body, #app{height: 100%;}
         line-height: 40px;
     }
 } 
+/* 弹框样式 */
+.el-dialog{
+    &.app-dialog{
+        .el-dialog__header{
+            padding: 0;
+        }
+        .el-dialog__body{
+            padding: 0;
+        }
+    }
+}

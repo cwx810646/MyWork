@@ -6,7 +6,7 @@ import registry from "../views/registry";
 const routes = [
   {
     path: "/",
-    redirect: "/login"
+    redirect: "/home"
   },
   {
     path: "/login",

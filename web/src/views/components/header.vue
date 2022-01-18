@@ -1,17 +1,33 @@
 <template>
     <div class="header">  
-        <div class="header-div--left"></div>
-        <div class="header-div--right">
-            <Avatar />
-            <SwitchButton @click="logout"/>
+        <div class="header-div-left app-title-middle">软件商城</div>
+        <div class="header-div-right"> 
+            <span v-if="account" class="app-cp" @click="logout">{{account}}</span>
+            <span v-else class="app-cp" @click="loginIn">登录 / 注册</span>
         </div> 
-    </div>    
+        <Entrance v-if="entranceVisible" @exit="entranceVisible = false"/>  
+    </div>   
 </template>
 <script>
-import { ElMessageBox, ElMessage } from 'element-plus'
+import { ElMessageBox, ElMessage } from 'element-plus';
+import Entrance from './dialogs/entrance';
 
 export default {
-    methods: {
+    components: {Entrance},
+    computed: {
+        account(){
+            return this.$store.state.account;
+        }
+    },
+    data(){
+        return {
+            entranceVisible: false
+        }
+    },
+    methods: { 
+        loginIn(){
+            this.entranceVisible = true;
+        },
         logout(){
             ElMessageBox.confirm(
                 '您确定要退出吗？',
@@ -32,15 +48,17 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+@import "../../styles/variables.less";
 .header{
     height: 60px;
     line-height: 60px;
-    background-color: #333;
+    background-color: @header-bg-color;
     color: #FFF; 
     display: flex;
     justify-content: space-between;
     padding: 0 15px;
-    .header-div--right{
+    *{color:  #FFF;} 
+    .header-div-right{
         display: flex;
         align-items: center; 
         :deep(.icon){

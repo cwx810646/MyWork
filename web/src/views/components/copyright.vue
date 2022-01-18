@@ -1,5 +1,5 @@
 <template>
-    <div class="footer">
+    <div class="copyright">
         <span>Copyright 2022-2122 鲲，All Rights Reserved.</span>
     </div>
 </template>
@@ -11,9 +11,10 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.footer{
+@import "../../styles/variables.less";
+.copyright{
     height: 80px;
-    background-color: #333;
+    background-color: @copyright-bg-color;
     text-align: center;
     line-height: 80px;
     *{

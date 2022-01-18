@@ -1,5 +1,5 @@
-import helloApi from "./helloApi";
+import userApi from "./userApi";
 
 export default {
-    helloApi
+    userApi
 };

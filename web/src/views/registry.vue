@@ -37,14 +37,14 @@
                 </div>
             </div>
         </div> 
-        <Footer />
+        <Copyright />
     </div>
 </template>
 <script>
-import Footer from './components/footer.vue';
+import Copyright from './components/copyright.vue';
 
 export default {
-    components: {Footer},
+    components: {Copyright},
     data(){
         return {
             registryForm:{}
