@@ -1,0 +1,11 @@
+server:
+  port: 3001
+
+spring:
+  profiles:
+    active: dev
+
+mybatis:
+  type-aliases-package: com.chenjie.dao.model
+  mapper-locations: classpath:mapper/*.xml
+
