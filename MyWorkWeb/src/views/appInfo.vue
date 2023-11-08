@@ -1,6 +1,8 @@
 <template>
     <div class="page">
         <iframe class="app-wrapper" :src="appInfo.url"/>
+
+        
     </div>
 </template>
 <script>
